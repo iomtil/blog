@@ -1,0 +1,553 @@
+/* Reset de bază și stiluri globale */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(42, 38, 35); /* Fundal Principal - Maro Foarte Închis */
+    color: rgb(255, 255, 255); /* Text Principal - Alb Pur */
+}
+
+.container
+{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+a
+{
+    color: rgb(255, 140, 0); /* Link-uri - Portocaliu Intens */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover
+{
+    color: rgb(255, 179, 102); /* La hover, portocaliu mai deschis */
+    background-color: rgb(42, 38, 35); /* Fundal Principal - Maro Foarte Închis */
+    text-decoration: underline;
+}
+
+ul
+{
+    list-style: none;
+}
+
+/* Antet (Header) */
+header
+{
+    background: rgb(82, 76, 71); /* Fundal Terțiar - Maro Mediu-Închis */
+    color: rgb(255, 255, 255); /* Text antet - Alb */
+    padding: 1.5rem 0;
+    border-bottom: 5px solid rgb(255, 140, 0); /* Linie de accent - Portocaliu Intens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+header h1
+{
+    float: left;
+    font-size: 2.2rem;
+}
+
+header h1 a
+{
+    color: rgb(255, 140, 0); /* Titlul blogului - Portocaliu Intens */
+    text-decoration: none;
+}
+
+header nav
+{
+    float: right;
+    margin-top: 8px;
+}
+
+header nav ul li
+{
+    display: inline;
+    padding: 0 20px;
+}
+
+header nav ul li a
+{
+    color: rgb(255, 140, 0); /* Link-uri navigație - Portocaliu Intens */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Conținut Principal (Main) */
+main.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+#blog-posts
+{
+    flex: 3;
+    min-width: 60%;
+    background: rgb(61, 56, 51); /* Fundal Secundar - Maro Închis */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.post
+{
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(82, 76, 71); /* Linie de separare - Maro Mediu-Închis */
+}
+
+.post:last-child
+{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.post h2
+{
+    color: rgb(255, 140, 0); /* Titlul postării - Portocaliu Intens */
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.post h2 a
+{
+    color: rgb(255, 140, 0); /* Link titlu postare - Portocaliu Intens */
+}
+
+.post-meta
+{
+    font-size: 0.85em;
+    color: rgb(211, 211, 211); /* Text Secundar - Gri deschis */
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.post-image
+{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Asigură că imaginea acoperă spațiul fără distorsiuni */
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-image:hover
+{
+    transform: scale(1.05); /* Mărire ușoară la hover */
+}
+
+.read-more
+{
+    display: inline-block;
+    background: rgb(255, 140, 0); /* Buton - Portocaliu Intens */
+    color: rgb(52, 58, 64); /* Text pe buton - aproape negru, pentru contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover
+{
+    background-color: rgb(42, 38, 35); /* Fundal Principal - Maro Foarte Închis */
+    text-decoration: none;
+}
+
+/* Bara Laterală (Sidebar) */
+#sidebar
+{
+    flex: 1;
+    min-width: 280px;
+    background: rgb(61, 56, 51); /* Fundal Secundar - Maro Închis */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.widget
+{
+    margin-bottom: 35px;
+}
+
+.widget h3
+{
+    margin-bottom: 20px;
+    color: rgb(255, 140, 0); /* Titlul widget-ului - Portocaliu Intens */
+    border-bottom: 2px solid rgb(255, 140, 0); /* Linie de accent - Portocaliu Intens */
+    padding-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.widget ul li
+{
+    padding: 8px 0;
+}
+
+.widget ul li a
+{
+    color: rgb(211, 211, 211); /* Link-uri widget - Gri deschis */
+}
+
+.widget ul li a:hover
+{
+    color: rgb(255, 179, 102); /* La hover, portocaliu mai deschis */
+}
+
+/* Subsol (Footer) */
+footer
+{
+    background: rgb(82, 76, 71); /* Fundal Terțiar - Maro Mediu-Închis */
+    color: rgb(211, 211, 211); /* Text subsol - Gri deschis */
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px)
+{
+    header h1,
+    header nav
+    {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul li
+    {
+        padding: 0 10px;
+    }
+
+    main.container
+    {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #blog-posts,
+    #sidebar
+    {
+        flex: auto;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px)
+{
+    header h1
+    {
+        font-size: 1.8rem;
+    }
+
+    header nav ul li
+    {
+        display: block;
+        padding: 5px 0;
+    }
+}
+
+.page-content
+{
+    background: rgb(61, 56, 51); /* Fundal Secundar - Maro Închis */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px; /* Asigură spațiu înainte de footer pe paginile simple */
+    flex: 1; /* Permite-i să se extindă în main */
+}
+
+.page-content .single-post-image
+{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Asigură că imaginea acoperă spațiul fără distorsiuni */
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* Elimină spațiul suplimentar de sub imagine */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-content .single-post-image:hover
+{
+    transform: scale(1.03); /* Mărire ușoară la hover */
+}
+
+.page-content h2
+{
+    color: rgb(255, 140, 0); /* Portocaliu Intens pentru titlurile de pagină */
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    border-bottom: 2px solid rgb(82, 76, 71);
+    padding-bottom: 10px;
+}
+
+.page-content p
+{
+    margin-bottom: 15px;
+}
+
+.page-content ul
+{
+    margin-left: 20px;
+    list-style: disc; /* Liste cu buline */
+    color: rgb(255, 255, 255); /* Text alb */
+}
+
+.page-content ul li
+{
+    margin-bottom: 8px;
+}
+
+.page-content blockquote
+{
+    font-style: italic;
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: rgb(52, 47, 43); /* Nuanță mai închisă pentru blockquote */
+    border-left: 5px solid rgb(255, 140, 0); /* Linie portocalie pe stânga */
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+}
+
+/*
+  inceput Caramizi
+  ----------------
+*/
+
+.caramizi
+{
+  columns: 3 300px;
+  column-gap: 1rem;
+  img 
+  {
+    background: rgb(0, 0, 0);
+    margin: 0 1rem 1rem 0;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/*
+  sfarsit Caramizi
+  ----------------
+*/
+
+/* Formular de Contact */
+.contact-form .form-group
+{
+    margin-bottom: 20px;
+}
+
+.contact-form label
+{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(255, 140, 0); /* Portocaliu pentru etichete */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(82, 76, 71); /* Culoare de bordură închisă */
+    border-radius: 5px;
+    background-color: rgb(52, 47, 43); /* Fundal închis pentru input-uri */
+    color: rgb(255, 255, 255); /* Text alb în input-uri */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus
+{
+    border-color: rgb(255, 140, 0); /* Bordură portocalie la focus */
+    outline: none;
+}
+
+.contact-form textarea
+{
+    resize: vertical; /* Permite redimensionarea pe verticală */
+}
+
+.contact-form .submit-button
+{
+    display: block;
+    width: auto; /* Lățime automată pentru buton */
+    margin-top: 25px;
+    background: rgb(255, 140, 0); /* Buton portocaliu */
+    color: rgb(52, 58, 64); /* Text aproape negru, pentru contrast */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form .submit-button:hover
+{
+    background: rgb(255, 179, 102); /* Portocaliu mai deschis la hover */
+}
+
+/* Stil pentru link-ul "Înapoi la Blog" */
+.back-to-blog
+{
+    display: block;
+    width: fit-content;
+    margin-left: auto;  /* Centrează orizontal */
+    margin-right: auto; /* Centrează orizontal */
+    padding: 8px 15px;
+    background-color: rgb(82, 76, 71);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    clear: both; /* Asigură că nu există float-uri pe lângă el */
+    width: 100%; /* Forțează să ocupe toată lățimea pentru a "rupe" rândul */
+}
+
+.back-to-blog:hover
+{
+    background-color: rgb(61, 56, 51);
+    text-decoration: none;
+}
+
+/* Stiluri pentru pagina individuală a unui articol */
+.single-post-page
+{
+    background: rgb(61, 56, 51); /* Același fundal ca blog-posts/sidebar */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Ocupă spațiul disponibil în main */
+    margin-bottom: 30px; /* Spațiu înainte de footer */
+}
+
+.single-post-page .post-title
+{
+    color: rgb(255, 140, 0); /* Titlul principal al articolului */
+    font-size: 2.8rem; /* Mai mare decât titlul postării de pe index */
+    margin-bottom: 15px;
+    text-align: center; /* Centrează titlul */
+}
+
+.single-post-page .post-meta-single
+{
+    font-size: 0.9em;
+    color: rgb(211, 211, 211);
+    margin-bottom: 30px;
+    font-style: italic;
+    text-align: center; /* Centrează meta-datele */
+}
+
+.single-post-page .single-post-image
+{
+    max-width: 100%;
+    height: auto;
+    display: block; /* Asigură că imaginea este un bloc */
+    margin: 0 auto 30px auto; /* Centrează imaginea și adaugă spațiu dedesubt */
+    border-radius: 8px; /* Colțuri mai rotunjite pentru imaginea mare */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-post-page .single-post-image:hover
+{
+    transform: scale(1.05); /* Mărește imaginea cu 5% când treci cu mouse-ul */
+}
+
+.single-post-page h3
+{
+    color: rgb(255, 140, 0); /* Titlurile de secțiune în articol */
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    border-bottom: 1px solid rgb(82, 76, 71);
+    padding-bottom: 5px;
+}
+
+.single-post-page p
+{
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255); /* Text alb */
+}
+
+.single-post-page ul
+{
+    margin-left: 30px; /* Indentare mai mare pentru liste */
+    list-style: disc;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.single-post-page ul li {
+    margin-bottom: 10px;
+}
+
+/* Stil pentru blockquote în articolele individuale */
+.single-post-page blockquote
+{
+    font-style: italic;
+    margin: 30px 20px;
+    padding: 20px 25px;
+    background: rgb(52, 47, 43);
+    border-left: 6px solid rgb(255, 140, 0);
+    border-radius: 5px;
+    color: rgb(211, 211, 211); /* Gri deschis pentru textul citat */
+    line-height: 1.8;
+}
+
+.single-post-page blockquote p
+{
+    margin-bottom: 0; /* Fără spațiu suplimentar sub paragraf în blockquote */
+}
+
+@media (max-width: 768px)
+{
+    .single-post-page .post-title
+    {
+        font-size: 2.2rem;
+    }
+    .single-post-page .single-post-image
+    {
+        margin-bottom: 20px;
+    }
+    .back-to-blog
+    {
+        margin-left: 0; /* Fără indentare pe mobil */
+        text-align: center;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
